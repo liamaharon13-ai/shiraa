@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>לקיוטי שלי ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .box {
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #e63963;
+        }
+
+        p {
+            font-size: 22px;
+            color: #555;
+        }
+
+        button {
+            border: none;
+            padding: 15px 30px;
+            margin: 15px;
+            border-radius: 12px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #yes {
+            background: #ff4d6d;
+            color: white;
+        }
+
+        #no {
+            background: #ddd;
+            color: #333;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>קיוטי ❤️</h1>
+
+        <p>Will you marry me? 💍</p>
+
+        <button id="yes">YES ❤️</button>
+        <button id="no">NO 😈</button>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("no");
+        const yesButton = document.getElementById("yes");
+
+        noButton.addEventListener("mouseover", function() {
+
+            const x = Math.random() * (window.innerWidth - 120);
+            const y = Math.random() * (window.innerHeight - 60);
+
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        });
+
+        yesButton.addEventListener("click", function() {
+            document.body.innerHTML = `
+                <div style="text-align:center; font-family:Arial;">
+                    <h1 style="font-size:60px;">קיוטי בחרה בכןןןן 💍❤️</h1>
+                    <p style="font-size:30px;">I love you cutie ❤️</p>
+                </div>
+            `;
+        });
+    </script>
+
+</body>
+</html>
